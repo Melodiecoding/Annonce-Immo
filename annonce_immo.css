@@ -251,7 +251,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 70%;
+    padding: 50px;
 }
 
 .boxform .input {
@@ -334,6 +334,8 @@ footer {
     align-items: center;
 }
 
+
+
 .middle-footer {
     width: 40%;
     display: flex;
@@ -354,7 +356,7 @@ footer {
 
 .titre-footer {
     color: white;
-
+    margin-bottom: 25px;
 }
 
 .agency {
@@ -377,6 +379,11 @@ footer {
     display: flex;
     width: 21%;
 }
+
+
+
+/* RESPONSIVE */
+
 
 @media screen and (min-width: 764px;) {
     .nav > a::after {

@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,7 +16,7 @@ header {
     font-size: small;
 }
 
-.titre{
+.titre {
     display: flex;
 }
 
@@ -66,37 +67,6 @@ header {
     text-decoration: none;
 }
 
-/* MENU BURGER */
-.burger-menu {
-    /* display: none; */
-    height: 400px;
-    width: 200px;
-    right: 69px;
-    z-index: 1;
-    background-color: rgb(165, 70, 87);
-    padding-top: 30px;
-    transition: left 0.5s ease;
-}
-
-.burger-menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 15px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.burger-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#burger {
-    display: none;
-}
-/* FIN MENU BURGER */
 
 .navbar {
     height: 1cm;
@@ -107,6 +77,29 @@ header {
     justify-content: flex-end;
     font-size: small;
 }
+
+
+/* MENU BURGER */
+label, #toggle {
+    display: none;
+}
+.menu-burger .main_pages {
+    display: none;
+}
+.menu-burger .main_pages a {
+    display: none;
+}
+ .menu-burger .main_pages a:hover {
+    display: none;
+ }
+ label{
+    display: none;
+ }
+ #toggle:checked + .main_pages {
+    display: none;
+ }
+
+
 
 /* TITRE ET PHOTO PRINCIPALE */
 
@@ -421,22 +414,8 @@ footer {
 }
 
 
-/* RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE*/
 
-
-@media screen and (min-width: 764px) {
-    .nav > a::after {
-        display: block;
-        content:"";
-        width: 0;
-        height: 1px;
-        transition: 0s;
-    }
-
-    .nav:hover > a::after {
-        width: 100%;
-    }
-}
 
 @media screen and (max-width: 764px) {
     body {
@@ -450,16 +429,77 @@ footer {
         display: none;
     }
 
-    #burger {
-        display: flex;
-        justify-content: flex-end;
-    }
-
     .nav {
         display: none;
     }
 
+    /* MENU BURGER */
+    label, #toggle {
+        display: none;
+    }
+
+    .menu-burger .main_pages {
+        position: relative;
+        flex-direction: column;
+        height: 300px;
+        width: 180px;
+        background-color: rgb(165, 70, 87);
+
+    }
+
+    .menu-burger .main_pages a {
+
+        width: 50%;
+        padding: 8px 8px 8px 28px;
+        text-decoration: none;
+        font-size: 15px;
+        color: rgb(4, 46, 92);
+        display: block;
+        transition: 0.3s;
+    }
+
+    .menu-burger .main_pages a:hover {
+        color: white;
+    }
+
+    label {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #toggle:checked + .main_pages {
+        display: flex;
+    }
+    /* FIN MENU BURGER */
+
+
     /* TITRE ET PHOTO PRINCIPALE */
+    .entete_annonce {
+        width: 90%;
+    }
+
+    .titre_annonce {
+        font-size: 12px;
+    }
+    
+    .soustitre_annonce {
+        font-size: 8px;
+    }
+    
+    
+    .click {
+        padding: 5px;
+        font-size: 8px;
+        float: right;
+    }
+
 
     /* CARACTÉRISTIQUES & ICONES */
 
@@ -475,8 +515,68 @@ footer {
 
 
     /* CONTACT & FORMULAIRE DE CONTACT */
+    .container_contacts {
+        display: block;
+    }
 
+    .leftpart {
+        padding: 5px;
+    }
+
+    .titre-rp {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rightpart {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .boxform {
+        width: 50%;
+        margin: 0;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .boxform {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    
     /* SUGGESTIONS DE BIENS */
+
+    .suggestions {
+        padding: 5px;
+    }
+    
+    
+    .container-mini {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .miniature-box {
+        width: 23%;
+    }
+    
+    
+    .mini {
+        width: 100px;
+        height: 90px;
+    }
+    
+    .legend {
+        width: 110%;
+    }
 
     /* FOOTER */
     footer {
@@ -494,7 +594,6 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
     }
 
     .titre-footer {
@@ -541,3 +640,4 @@ footer {
         display: flex;
         justify-content: space-between;
     }
+}
